@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ApdateNote</string>
+    <string name="search_notes">Search notes...</string>
+    <string name="link"></string>
+</resources>

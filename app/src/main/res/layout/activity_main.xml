@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.MainActivity"
+    android:background="@color/purple_200">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_main_activity"
+        android:text="My New"
+        android:textStyle="bold"
+        android:textSize="@dimen/_18sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:textColor="@color/white"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_search_main_activity"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@id/tv_main_activity"
+        android:background="@drawable/back_search">
+
+<!--        android:background="@color/COLORSearchBackground"-->
+        
+        <ImageView
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_baseline_search_24"
+            app:tint="@color/colorSearchIcon"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_main_activity_search"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:hint="@string/search_notes"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/colorTextHint"
+            android:textSize="@dimen/_15ssp"/>
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/layout_search_main_activity"
+        app:layout_constraintBottom_toTopOf="@id/layout_button_main_activity"
+        android:id="@+id/rv_main_activity"
+        android:layout_margin="@dimen/_10sdp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/_15sdp"
+        android:id="@+id/layout_button_main_activity"
+        android:gravity="center_vertical"
+        android:background="@color/colorQuickActionBackground">
+
+        <ImageView
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:id="@+id/iv_addNote_main_activity"
+            android:src="@drawable/ic_baseline_add_circle_outline_24"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:contentDescription="@string/app_name"
+            app:tint="@color/colorIcon" />
+        <ImageView
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:id="@+id/iv_addImage_main_activity"
+            android:src="@drawable/ic_baseline_image_24"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:contentDescription="@string/app_name"
+            app:tint="@color/colorIcon"/>
+        <ImageView
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:id="@+id/iv_addLink_main_activity"
+            android:src="@drawable/ic_baseline_language_24"
+            app:tint="@color/colorIcon"
+            android:contentDescription="@string/app_name"/>
+        
+    </LinearLayout>
+    <ImageView
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:id="@+id/btn_add_main_activity"
+        android:padding="@dimen/_5sdp"
+        android:background="@drawable/add_button"
+        android:src="@drawable/ic_baseline_add_24"
+        app:tint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/layout_button_main_activity"
+        app:layout_constraintTop_toTopOf="@id/layout_button_main_activity"
+        android:layout_marginEnd="@dimen/_15sdp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
